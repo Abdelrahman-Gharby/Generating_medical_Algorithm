@@ -1,0 +1,108 @@
+.node-card-container {
+  position: relative;
+  width: 200px; /* Fixed width */
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-bottom: 5px;
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 50px; /* Minimum height */
+}
+
+.node-header {
+  background-color: #007bff; 
+  height: 16px;
+  border-radius: 12px 12px 0 0;
+}
+
+.node-content {
+  display: flex; /* Use Flexbox */
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  flex-direction: column;
+  flex-grow: 1; /* Allow content to grow and fill available space */
+}
+
+.node-message-input {
+  color: #333;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 14px;
+  width: 100%; /* Full width */
+  word-wrap: break-word; /* Break long words */
+  white-space: pre-wrap; 
+  overflow: hidden; /* Remove scrollbar */
+  resize: none; /* Disable manual resizing */
+  flex-grow: 1; /* Allow textarea to grow and fill available space */
+  height: auto;
+}
+
+.node-info {
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon-container {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.info-icon-container:hover .info-icon {
+  opacity: 1;
+}
+
+.reference-tooltip {
+  position: absolute;
+  bottom: 100%;
+  right: -10px;
+  background: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  z-index: 1000;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  max-width: 300px;
+  min-width: 150px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.reference-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  border: 5px solid transparent;
+  border-top-color: #333;
+}
+
+.reference-tooltip a {
+  color: #4fc3f7;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.reference-tooltip a:hover {
+  text-decoration: underline;
+}
