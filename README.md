@@ -46,10 +46,23 @@ The architecture is as follows:
 1. Medical PDF and guideline ingestion: Documents and flowcharts from reliable 
 sources are parsed and stored as vector embeddings. 
 2. Cosine similarity retrieval: When a user requests an algorithm, the system retrieves 
-the top-matching existing algorithms or guideline chunks using cosine similarity. 
-3. Context-aware generation: These retrieved examples are fed into the LLaMA 3.2 
+the top-matching existing algorithms or guideline chunks using cosine similarity.
+4. Context-aware generation: These retrieved examples are fed into the LLaMA 3.2 
 model as contextual prompts, guiding the generation towards medically sound outputs. 
 LangChain provides the orchestration framework to integrate the retriever (using FAISS or 
 ChromaDB) and the LLM generator. This hybrid approach ensures that generated outputs 
 remain grounded in previously vetted material, significantly reducing hallucination risk and 
 increasing user trust. https://colab.research.google.com/drive/1Xch4KGXhGBVDw5YJldFDtPxfXrPt5Xmb?usp=sharing
+# web Application
+Frontend: Built with React using ReactFlow to display the decision tree.
+
+Backend: Developed using Django to handle model requests and user authentication.
+
+ Key Features
+ 1. User Login / Signup
+
+ 2. Input a disease name and generate the algorithm.
+
+ 3. Visual algorithm generation using ReactFlow.
+
+ 4. Interactive UI with commenting/editing options.
