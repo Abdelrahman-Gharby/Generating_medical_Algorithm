@@ -22,3 +22,34 @@ vLLM is designed to enable high-throughput, low-latency serving of LLMs by using
 batching and memory-efficient attention mechanisms. This change reduced the generation 
 latency from 60 seconds down to approximately 12 seconds, representing a 76% improvement 
 in response time. https://colab.research.google.com/drive/1m6_SmDeXZBsg8hhFG36wuBSFU8OXC4iM?usp=sharing
+# Medical Crawling Engine  
+Medical accuracy and credibility are vital to the success of any clinical decision support tool. To 
+ensure that each step in the generated algorithms is traceable to a reliable source, we 
+implemented a custom crawling engine. 
+This engine automatically queries well-known medical organizations including: 
+ 
+• World Health Organization (WHO) 
+• Centers for Disease Control and Prevention (CDC) 
+• National Institute for Health and Care Excellence (NICE) 
+The engine scrapes structured content from these websites by targeting pages specific to the 
+disease in question. Extracted information includes treatment guidelines, diagnostic 
+procedures, and recommended interventions. These references are then matched to the 
+generated algorithm steps, ensuring that each clinical decision node can be justified with a 
+trusted citation. https://colab.research.google.com/drive/1Xch4KGXhGBVDw5YJldFDtPxfXrPt5Xmb?usp=sharing
+ 
+# Retrieval-Augmented Generation with LangChain and RAG 
+ 
+To further improve the model's grounding and adaptability, we implemented a retrieval
+augmented generation (RAG) pipeline using LangChain. 
+The architecture is as follows: 
+ 
+1. Medical PDF and guideline ingestion: Documents and flowcharts from reliable 
+sources are parsed and stored as vector embeddings. 
+2. Cosine similarity retrieval: When a user requests an algorithm, the system retrieves 
+the top-matching existing algorithms or guideline chunks using cosine similarity. 
+3. Context-aware generation: These retrieved examples are fed into the LLaMA 3.2 
+model as contextual prompts, guiding the generation towards medically sound outputs. 
+LangChain provides the orchestration framework to integrate the retriever (using FAISS or 
+ChromaDB) and the LLM generator. This hybrid approach ensures that generated outputs 
+remain grounded in previously vetted material, significantly reducing hallucination risk and 
+increasing user trust. https://colab.research.google.com/drive/1Xch4KGXhGBVDw5YJldFDtPxfXrPt5Xmb?usp=sharing
