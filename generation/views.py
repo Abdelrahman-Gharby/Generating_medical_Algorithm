@@ -8,7 +8,7 @@ import google.generativeai as genai
 from PIL import Image
 import re
 
-genai.configure(api_key="AIzaSyAMCJ99KtRWxHrYtHVE7_H9IRvJ-u6fWG4")
+genai.configure(api_key="yourAPI")
 
 _MODEL_NAME   = "gemini-2.5-pro"
 _PROMPT       ="""
