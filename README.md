@@ -15,3 +15,10 @@ LoRA (Low-Rank Adaptation) fine-tuning. This technique reduces the number of tra
 parameters significantly by introducing low-rank matrices into the attention and feed-forward 
 layers of the transformer, allowing efficient training even on limited GPU resources. 
 https://colab.research.google.com/drive/1NoGiqjsWH15F6eObWdJRdiY_l7MZyLq3?usp=sharing 
+# Performance Optimization with vLLM
+algorithm, making real-time user experience impractical. To overcome this limitation, we 
+integrated the vLLM (Virtualization of LLMs) inference engine. 
+vLLM is designed to enable high-throughput, low-latency serving of LLMs by using continuous 
+batching and memory-efficient attention mechanisms. This change reduced the generation 
+latency from 60 seconds down to approximately 12 seconds, representing a 76% improvement 
+in response time. https://colab.research.google.com/drive/1m6_SmDeXZBsg8hhFG36wuBSFU8OXC4iM?usp=sharing
