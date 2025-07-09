@@ -27,9 +27,9 @@ Medical accuracy and credibility are vital to the success of any clinical decisi
 ensure that each step in the generated algorithms is traceable to a reliable source, we 
 implemented a custom crawling engine. 
 This engine automatically queries well-known medical organizations including: 
- *  World Health Organization (WHO) 
-• Centers for Disease Control and Prevention (CDC) 
-• National Institute for Health and Care Excellence (NICE) 
+*  World Health Organization (WHO) 
+*  Centers for Disease Control and Prevention (CDC) 
+*  National Institute for Health and Care Excellence (NICE) 
 The engine scrapes structured content from these websites by targeting pages specific to the 
 disease in question. Extracted information includes treatment guidelines, diagnostic 
 procedures, and recommended interventions. These references are then matched to the 
