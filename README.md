@@ -1,5 +1,5 @@
 # Generating_medical_Algorithm
-# video Demo : https://youtu.be/BgeXVbxDbNQ
+## video Demo : https://youtu.be/BgeXVbxDbNQ
 # Overview
 🔍 Introduction
 This graduation project is an AI-powered medical assistant designed to automatically generate medical decision algorithms based on disease names. The system combines fine-tuned language models with web crawling and interactive visualization to help medical professionals and students make accurate, evidence-based decisions.
