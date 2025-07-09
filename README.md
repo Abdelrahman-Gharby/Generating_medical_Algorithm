@@ -6,3 +6,4 @@ This graduation project is an AI-powered medical assistant designed to automatic
 
 💡 Why it's important:
 Doctors rely on structured decision algorithms to make critical choices. Manual creation is time-consuming and often lacks up-to-date references. This tool automates the generation of clinical pathways using cutting-edge LLMs and medical sources (e.g. WHO, NICE, CDC), helping improve efficiency, accuracy, and accessibility in healthcare.
+$ llms
